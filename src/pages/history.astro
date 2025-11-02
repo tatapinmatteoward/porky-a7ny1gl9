@@ -1,0 +1,245 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pageTitle = "History of Porky Pie Tales";
+const pageDescription = "Discover the rich heritage and innovative journey of Porky Pie Tales, blending time-honored pork pie traditions with contemporary flair.";
+const timelineEvents = [
+  {
+    year: "1825",
+    title: "The Birth of a Legend",
+    description: "Grandfather Elias Porky perfects his recipe in Melton Mowbray, creating the first authentic Porky Pie."
+  },
+  {
+    year: "1850",
+    title: "The Victorian Expansion",
+    description: "Porky Pies begin appearing in London's finest establishments, gaining national recognition."
+  },
+  {
+    year: "1920",
+    title: "Craftsmanship Through Time",
+    description: "The family recipe is passed down to Elias's granddaughter, Margaret, who adds her own innovations."
+  },
+  {
+    year: "1985",
+    title: "Modern Revival",
+    description: "Porky Pie Tales is founded with a commitment to preserving authentic recipes while embracing modern techniques."
+  },
+  {
+    year: "2010",
+    title: "Global Recognition",
+    description: "Our pies are featured in renowned culinary publications and exported to 15 countries."
+  }
+];
+const heritageValues = [
+  {
+    icon: "fas fa-utensils",
+    title: "Authentic Tradition",
+    description: "Rooted in centuries-old recipes passed down through generations"
+  },
+  {
+    icon: "fas fa-leaf",
+    title: "Sustainable Sourcing",
+    description: "Locally-sourced ingredients that respect both tradition and nature"
+  },
+  {
+    icon: "fas fa-award",
+    title: "Craftsmanship Excellence",
+    description: "Each pie crafted with meticulous attention to detail and quality"
+  },
+  {
+    icon: "fas fa-heart",
+    title: "Family Heritage",
+    description: "A legacy built on love, tradition, and passion for the perfect pie"
+  }
+];
+const quote = {
+  text: "A pork pie isn't just food - it's a story on a plate, shared around family tables and village feasts for generations.",
+  author: "Grandfather Elias Porky"
+};
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-br from-primary to-[#3a001b] py-24 md:py-32 overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgdmlld0JveD0iMCAwIDIwIDIwIj48Y2lyY2xlIGN4PSIxMCIgY3k9IjEwIiByPSIzIiBmaWxsPSIjODA4MDAwIi8+PC9zdmc+')]"></div>
+    </div>
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="max-w-3xl mx-auto text-center">
+        <h1 class="text-4xl md:text-6xl font-serif font-bold text-white mb-6">{pageTitle}</h1>
+        <p class="text-xl md:text-2xl text-accent-200 mb-8 max-w-2xl mx-auto">
+          Savoring the Heritage of Traditional Porky Pies with a Modern Twist
+        </p>
+        <div class="flex justify-center mt-12">
+          <div class="w-24 h-1 bg-accent rounded-full"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Legacy Section -->
+  <section class="py-20 bg-gradient-to-b from-white to-[#f8f4f0]">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row items-center gap-12">
+        <div class="md:w-1/2">
+          <div class="relative">
+            <div class="absolute -top-6 -left-6 w-full h-full border-4 border-accent rounded-lg"></div>
+            <div class="relative bg-[#f0e6d2] border-2 border-[#d4c8b2] p-8">
+              <div class="text-center">
+                <i class="fas fa-leaf text-5xl text-primary mb-4"></i>
+                <h3 class="text-2xl font-serif font-bold text-primary mb-4">A Legacy Born in Tradition</h3>
+                <p class="text-gray-700 leading-relaxed">
+                  Nestled in the heart of England's culinary heartlands, <em>Porky Pie Tales</em> traces its roots back to the early 19th century. Our story begins with <strong>Grandfather Elias Porky</strong>, a master baker in the quaint village of Melton Mowbray, renowned as the birthplace of the authentic pork pie. In 1825, Elias perfected his recipe using locally sourced pork, flaky pastry, and a secret blend of spices that captured the essence of British countryside flavors. These handcrafted pies weren't just food—they were tales on a plate, shared around family tables and village feasts.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="md:w-1/2">
+          <div class="bg-gradient-to-br from-[#4b0026] to-[#2d0016] rounded-xl p-8 text-white">
+            <h3 class="text-2xl font-serif font-bold mb-6 flex items-center">
+              <i class="fas fa-history mr-3 text-accent"></i>
+              The Golden Age of Craftsmanship
+            </h3>
+            <p class="mb-4 leading-relaxed">
+              Through the Victorian era and into the 20th century, the Porky Pie became a staple of British heritage. Elias's descendants carried the torch, innovating subtly while preserving the authentic essence of the craft.
+            </p>
+            <p class="mb-6 leading-relaxed">
+              In the 1980s, our family vision merged with modern culinary techniques, creating a new legacy that honors the past while embracing the future.
+            </p>
+            <div class="flex justify-center">
+              <div class="w-16 h-1 bg-accent rounded-full"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline Section -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-serif font-bold text-primary mb-4">Our Journey Through Time</h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          A chronology of pivotal moments that shaped Porky Pie Tales into what it is today
+        </p>
+      </div>
+
+      <div class="relative">
+        <!-- Timeline line -->
+        <div class="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-accent to-primary"></div>
+        
+        <div class="space-y-12">
+          {timelineEvents.map((event, index) => (
+            <div class={`relative flex ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'} items-center`}>
+              <div class={`w-1/2 ${index % 2 === 0 ? 'pr-12 text-right' : 'pl-12'}`}>
+                <div class="bg-white p-6 rounded-lg shadow-lg border-l-4 border-accent">
+                  <span class="inline-block px-3 py-1 bg-primary text-white rounded-full text-sm font-bold mb-3">
+                    {event.year}
+                  </span>
+                  <h3 class="text-xl font-serif font-bold text-primary mb-2">{event.title}</h3>
+                  <p class="text-gray-700">{event.description}</p>
+                </div>
+              </div>
+              <div class="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-accent border-4 border-white z-10 flex items-center justify-center">
+                <div class="w-2 h-2 rounded-full bg-white"></div>
+              </div>
+              <div class="w-1/2"></div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Heritage Values -->
+  <section class="py-20 bg-gradient-to-br from-[#f0e6d2] to-[#e0d6bf]">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-serif font-bold text-primary mb-4">Our Core Heritage Values</h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          What guides our passion and drives our continued excellence
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {heritageValues.map((value, index) => (
+          <div 
+            class="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-[#d4c8b2] transform hover:-translate-y-1 transition-transform duration-300"
+            key={index}
+          >
+            <div class="text-center">
+              <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                <i class={`${value.icon} text-white text-2xl`}></i>
+              </div>
+              <h3 class="text-xl font-serif font-bold text-primary mb-3">{value.title}</h3>
+              <p class="text-gray-700">{value.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote Section -->
+  <section class="py-20 bg-gradient-to-r from-primary to-[#3a001b]">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <div class="relative">
+          <div class="absolute -top-8 -left-8 w-16 h-16 bg-accent rounded-full flex items-center justify-center">
+            <i class="fas fa-quote-left text-white text-2xl"></i>
+          </div>
+          <blockquote class="text-2xl md:text-3xl font-serif italic text-white mb-8">
+            {quote.text}
+          </blockquote>
+          <p class="text-xl text-accent-200 font-serif">— {quote.author}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Legacy Continues -->
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-serif font-bold text-primary mb-6">The Legacy Continues</h2>
+        <p class="text-lg text-gray-700 mb-12 leading-relaxed">
+          Today, Porky Pie Tales stands as a testament to centuries of culinary heritage, blending time-honored techniques with contemporary innovation. Each pie tells a story of tradition, crafted with passion and served with pride.
+        </p>
+        <div class="inline-block bg-gradient-to-r from-primary to-accent text-white px-8 py-4 rounded-full text-lg font-bold hover:shadow-lg transition-shadow duration-300">
+          Experience the Legacy
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+  
+  .animate-fade-in {
+    animation: fadeIn 1s ease-in;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .timeline-line::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(to bottom, #808000, #4b0026);
+    transform: translateX(-50%);
+  }
+  
+  .hover-effect:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+</style>

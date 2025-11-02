@@ -1,0 +1,253 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pageTitle = "Delicious Porky Pie Recipes";
+const pageDescription = "Explore our collection of traditional porky pie recipes with modern twists. From classic heritage bakes to innovative fusions, discover mouthwatering ideas to savor the best of both worlds.";
+
+const recipes = [
+  {
+    id: 1,
+    title: "Classic Porky Pie with a Herb-Infused Twist",
+    description: "This recipe honors the original porky pie from our heritage roots but elevates it with fresh herbs and a flaky, buttery crust inspired by modern baking techniques.",
+    prepTime: "45 mins",
+    cookTime: "1hr 30 mins",
+    difficulty: "Medium"
+  },
+  {
+    id: 2,
+    title: "Spicy Porky Pie with Smoked Paprika",
+    description: "A fiery take on the traditional recipe, featuring smoked paprika and a hint of cayenne for those who enjoy a kick of heat in their porky pies.",
+    prepTime: "30 mins",
+    cookTime: "1hr 15 mins",
+    difficulty: "Medium"
+  },
+  {
+    id: 3,
+    title: "Mediterranean Porky Pie with Feta",
+    description: "A delightful fusion that combines the richness of pork with Mediterranean flavors including feta cheese, olives, and fresh herbs.",
+    prepTime: "50 mins",
+    cookTime: "1hr 45 mins",
+    difficulty: "Hard"
+  },
+  {
+    id: 4,
+    title: "Sweet & Savory Porky Pie with Apple",
+    description: "An innovative twist that pairs tender pork with sweet apple slices and a hint of cinnamon, creating a unique balance of flavors.",
+    prepTime: "40 mins",
+    cookTime: "1hr 20 mins",
+    difficulty: "Easy"
+  }
+];
+
+const testimonials = [
+  {
+    id: 1,
+    name: "Margaret Thorne",
+    text: "These recipes revived my grandmother's old recipe with such modern precision. My family loves the Herb-Infused version!",
+    rating: 5
+  },
+  {
+    id: 2,
+    name: "James Pemberton",
+    text: "The Mediterranean fusion was a revelation! Perfect balance of savory and tangy flavors. A true heritage-meets-innovation experience.",
+    rating: 5
+  },
+  {
+    id: 3,
+    name: "Eliza Morrison",
+    text: "As a novice baker, I found the Easy Sweet & Savory version approachable yet delicious. This site is my go-to resource!",
+    rating: 4
+  }
+];
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <!-- Hero Section -->
+  <section class="relative bg-gradient-to-r from-[#4b0026] to-[#808000] py-24 overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <div class="bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCI+CjxyZWN0IHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgZmlsbD0ibm9uZSIvPgo8Y2lyY2xlIGN4PSIyMCIgY3k9IjIwIiByPSIyIiBmaWxsPSIjZmZmIi8+Cjwvc3ZnPg==')] w-full h-full"></div>
+    </div>
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="max-w-3xl mx-auto text-center">
+        <h1 class="text-4xl md:text-6xl font-serif font-bold text-white mb-6 leading-tight">
+          Delicious Porky Pie Recipes
+        </h1>
+        <p class="text-xl md:text-2xl text-amber-100 mb-8 font-serif">
+          Savoring the Heritage of Traditional Porky Pies with a Modern Twist
+        </p>
+        <div class="flex justify-center space-x-4">
+          <div class="bg-white bg-opacity-20 backdrop-blur-sm rounded-full px-6 py-3 text-white font-medium">
+            <i class="fas fa-utensils mr-2"></i> Traditional Recipes
+          </div>
+          <div class="bg-white bg-opacity-20 backdrop-blur-sm rounded-full px-6 py-3 text-white font-medium">
+            <i class="fas fa-star mr-2"></i> Modern Twists
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Introduction Section -->
+  <section class="py-16 bg-amber-50">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <div class="bg-white rounded-2xl shadow-lg p-8 md:p-12">
+          <h2 class="text-3xl font-serif font-bold text-[#4b0026] mb-6">Porky Pie Recipes: Heritage Meets Innovation</h2>
+          <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+            Welcome to the heart of <em>Porky Pie Tales</em>, where we celebrate the timeless tradition of porky pies with a fresh, contemporary flair. Our recipes blend the comforting flavors of vintage baking with modern techniques and ingredients, ensuring every bite tells a story of culinary heritage and creativity.
+          </p>
+          <p class="text-lg text-gray-700 leading-relaxed">
+            Whether you're a seasoned baker or just starting your pie-making adventure, our curated selection offers something for everyone. Dive into our featured recipes below, complete with step-by-step instructions, tips, and serving suggestions.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Recipes -->
+  <section class="py-16 bg-[#4b0026]">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-serif font-bold text-white mb-4">Featured Recipes</h2>
+        <div class="w-24 h-1 bg-[#808000] mx-auto"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {recipes.map((recipe) => (
+          <div 
+            class="bg-white rounded-xl overflow-hidden shadow-xl transform transition duration-500 hover:scale-105 hover:shadow-2xl"
+            key={recipe.id}
+          >
+            <div class="h-48 bg-gradient-to-r from-[#808000] to-[#4b0026] relative">
+              <div class="absolute bottom-4 left-4 bg-amber-100 bg-opacity-80 text-[#4b0026] px-3 py-1 rounded-full text-sm font-bold">
+                {recipe.difficulty}
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-serif font-bold text-[#4b0026] mb-3">{recipe.title}</h3>
+              <p class="text-gray-600 mb-4">{recipe.description}</p>
+              <div class="flex justify-between text-sm text-gray-500 mb-4">
+                <span><i class="fas fa-clock mr-1"></i> Prep: {recipe.prepTime}</span>
+                <span><i class="fas fa-fire mr-1"></i> Cook: {recipe.cookTime}</span>
+              </div>
+              <button class="w-full bg-[#4b0026] text-white py-2 rounded-lg hover:bg-[#808000] transition duration-300 font-medium">
+                View Recipe
+              </button>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="py-16 bg-amber-50">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-serif font-bold text-[#4b0026] mb-4">What Our Bakers Say</h2>
+        <div class="w-24 h-1 bg-[#808000] mx-auto"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {testimonials.map((testimonial) => (
+          <div 
+            class="bg-white rounded-2xl shadow-lg p-8 border-l-4 border-[#808000] transform transition duration-500 hover:shadow-xl"
+            key={testimonial.id}
+          >
+            <div class="flex mb-4">
+              {[...Array(5)].map((_, i) => (
+                <i 
+                  key={i} 
+                  class={`fas fa-star ${i < testimonial.rating ? 'text-amber-500' : 'text-gray-300'}`}
+                ></i>
+              ))}
+            </div>
+            <p class="text-gray-700 italic mb-6">"{testimonial.text}"</p>
+            <p class="font-bold text-[#4b0026]">- {testimonial.name}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-gradient-to-r from-[#4b0026] to-[#808000]">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl md:text-4xl font-serif font-bold text-white mb-6">Ready to Bake Your Creation?</h2>
+      <p class="text-xl text-amber-100 max-w-2xl mx-auto mb-10">
+        Join our community of porky pie enthusiasts and share your own modern twists with our recipe submission program.
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <button class="bg-white text-[#4b0026] px-8 py-3 rounded-full font-bold hover:bg-amber-100 transition duration-300 shadow-lg">
+          Submit Your Recipe
+        </button>
+        <button class="bg-transparent border-2 border-white text-white px-8 py-3 rounded-full font-bold hover:bg-white hover:text-[#4b0026] transition duration-300">
+          View Full Recipe Library
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer CTA -->
+  <footer class="py-12 bg-[#4b0026] text-amber-100">
+    <div class="container mx-auto px-4 text-center">
+      <h3 class="text-2xl font-serif font-bold mb-4">Join Our Porky Pie Community</h3>
+      <p class="max-w-2xl mx-auto mb-6">Subscribe to our newsletter for seasonal recipes, baking tips, and exclusive member-only content.</p>
+      <div class="max-w-md mx-auto flex">
+        <input 
+          type="email" 
+          placeholder="Your email address" 
+          class="flex-1 px-4 py-3 rounded-l-lg text-gray-800 focus:outline-none"
+        />
+        <button class="bg-[#808000] text-white px-6 py-3 rounded-r-lg font-bold hover:bg-[#4b0026] transition duration-300">
+          Subscribe
+        </button>
+      </div>
+    </div>
+  </footer>
+</Layout>
+
+<style>
+  @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+  
+  body {
+    font-family: 'Georgia', serif;
+  }
+  
+  .font-serif {
+    font-family: 'Georgia', serif;
+  }
+  
+  .hero-pattern {
+    background-image: repeating-linear-gradient(
+      45deg,
+      rgba(128, 128, 0, 0.05) 0px,
+      rgba(128, 128, 0, 0.05) 10px,
+      rgba(0, 0, 0, 0.05) 10px,
+      rgba(0, 0, 0, 0.05) 20px
+    );
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+    opacity: 0;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .recipe-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+  
+  .testimonial-card {
+    transition: all 0.3s ease;
+  }
+  
+  .testimonial-card:hover {
+    transform: scale(1.03);
+  }
+</style>
